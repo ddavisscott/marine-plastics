@@ -1,0 +1,61 @@
+@import url('https://fonts.google.apis.com/css?family=Oswald');
+
+html, body{
+  margin:0;
+  padding:0;
+  height:100%;
+  width:100;
+}
+.intro{
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  background-image: url("./santacruz.jpg");
+ background-repeat: no-repeat 50% 50%;
+ display: table;
+ top:0;
+ background-size: cover;
+}
+.intro .inner{
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  max-width: none;
+}
+.content{
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+.heading {
+  font-size: 400%;
+  color: #F9F3F4;
+  text-shadow: 0px 0px 400px #000;
+  font-family: 'Oswald', serif;
+  }
+
+.largebutton {
+    border-radius: 9px;
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+    font-size: 250%;
+    margin: 10px 20px;
+    border: solid #036A81 3px;
+    background: none;
+    text-transform: uppercase;
+    text-decoration: none;
+
+}
+.largebutton:hover{
+  color: #fff;
+  border: solid #fff 3px;
+}
+@media screen and (max-width: 768px){
+  .heading{
+    font-size: 250%;
+  }
+  .largebutton{
+    font-size: 110%;
+    padding: 7px 15px;
+  }
+}

@@ -23,5 +23,17 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guitav/marine-plastics.git"
+  },
+  "author": "Guita Vahdatinia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guitav/marine-plastics/issues"
+  },
+  "homepage": "https://github.com/guitav/marine-plastics#readme"
 }
