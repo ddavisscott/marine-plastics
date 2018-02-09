@@ -1,8 +1,12 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
+import classNames from 'classnames';
 
 // Import Style
 import styles from './App.css';
+// the link to uikit should eventually be replaced with:
+// import uikit from 'uikit';
+// (or something like that)
 
 // Import Components
 import Helmet from 'react-helmet';
@@ -17,7 +21,10 @@ import { switchLanguage } from '../../modules/Intl/IntlActions';
 export class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { isMounted: false };
+    this.state = {
+      isMounted: false,
+      isLanding: true,
+    };
   }
 
   componentDidMount() {
@@ -28,14 +35,24 @@ export class App extends Component {
     this.props.dispatch(toggleAddPost());
   };
 
+  // landingBackground = () => {
+  //   this.setState({ isLanding: this.state.isLanding ? false : true });
+  // }
+
   render() {
+    let appStyles = classNames(styles.container, {
+      landing_background: this.state.isLanding,
+      // this.state.isLanding ? styles.landing_background : null
+    });
+
     return (
       <div>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.39/css/uikit.min.css" />
         {this.state.isMounted && !window.devToolsExtension && process.env.NODE_ENV === 'development' && <DevTools />}
         <div>
           <Helmet
-            title="MERN Starter - Blog App"
-            titleTemplate="%s - Blog App"
+            title="Marine Plastics Monitor"
+            titleTemplate="%s"
             meta={[
               { charset: 'utf-8' },
               {
@@ -53,7 +70,7 @@ export class App extends Component {
             intl={this.props.intl}
             toggleAddPost={this.toggleAddPostSection}
           />
-          <div className={styles.container}>
+          <div className={appStyles}>
             {this.props.children}
           </div>
           <Footer />
