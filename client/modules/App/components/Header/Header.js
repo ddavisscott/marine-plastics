@@ -18,6 +18,7 @@ export function Header(props, context) {
             <Link to="/" ><FormattedMessage id="siteTitle" /></Link>
           </li>
           <li><Link to="/landing">Landing</Link></li>
+          <li><Link to="/protocol">Protocol</Link></li>
         </ul>
         {
           context.router.isActive('/', true)
