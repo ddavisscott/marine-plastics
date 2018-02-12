@@ -9,11 +9,11 @@ import styles from './Footer.css';
 // import bg from '../../header-bk.png';
 
 export function Footer() {
-  let footerStyles = classNames('uk-position-bottom', styles.footer);
+  // let footerStyles = classNames('uk-position-bottom', styles.footer);
 
   return (
-    <div className={footerStyles}>
-      <p><a href="https://cleanoceansinternational.org/">Clean Oceans International</a></p>
+    <div className="uk-grid">
+      <a className="uk-width-expand uk-text-center uk-text-primary" href="https://cleanoceansinternational.org/">Clean Oceans International</a>
     </div>
   );
 }

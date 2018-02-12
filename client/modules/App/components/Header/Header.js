@@ -11,11 +11,11 @@ export function Header(props, context) {
   // );
 
   return (
-    <nav className="uk-navbar-container uk-navbar-transparent">
+    <nav className="uk-navbar-container uk-navbar-transparent uk-margin-bottom-small">
       <div className="uk-navbar-left">
         <ul className="uk-navbar-nav">
           <li className="uk-logo">
-            <Link to="/" ><FormattedMessage id="siteTitle" /></Link>
+            <Link to="/" ><h1 className="uk-heading-primary uk-text-large uk-margin-remove-bottom ">Marine Plastics Monitor</h1></Link>
           </li>
           <li><Link to="/landing">Landing</Link></li>
         </ul>

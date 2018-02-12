@@ -35,21 +35,13 @@ export class App extends Component {
     this.props.dispatch(toggleAddPost());
   };
 
-  // landingBackground = () => {
-  //   this.setState({ isLanding: this.state.isLanding ? false : true });
-  // }
-
   render() {
-    let appStyles = classNames(styles.container, {
-      landing_background: this.state.isLanding,
-      // this.state.isLanding ? styles.landing_background : null
-    });
 
     return (
       <div>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.39/css/uikit.min.css" />
         {this.state.isMounted && !window.devToolsExtension && process.env.NODE_ENV === 'development' && <DevTools />}
-        <div>
+        <div className="uk-container uk-container-center">
           <Helmet
             title="Marine Plastics Monitor"
             titleTemplate="%s"
@@ -70,7 +62,7 @@ export class App extends Component {
             intl={this.props.intl}
             toggleAddPost={this.toggleAddPostSection}
           />
-          <div className={appStyles}>
+          <div className="uk-grid">
             {this.props.children}
           </div>
           <Footer />
