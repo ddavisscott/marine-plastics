@@ -2,12 +2,6 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
 
-// Import Style
-import styles from './App.css';
-// the link to uikit should eventually be replaced with:
-// import uikit from 'uikit';
-// (or something like that)
-
 // Import Components
 import Helmet from 'react-helmet';
 import DevTools from './components/DevTools';
@@ -23,7 +17,6 @@ export class App extends Component {
     super(props);
     this.state = {
       isMounted: false,
-      isLanding: true,
     };
   }
 
@@ -36,7 +29,6 @@ export class App extends Component {
   };
 
   render() {
-
     return (
       <div>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.39/css/uikit.min.css" />
@@ -58,8 +50,6 @@ export class App extends Component {
             ]}
           />
           <Header
-            switchLanguage={lang => this.props.dispatch(switchLanguage(lang))}
-            intl={this.props.intl}
             toggleAddPost={this.toggleAddPostSection}
           />
           <div className="uk-grid">

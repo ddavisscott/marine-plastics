@@ -1,8 +1,8 @@
 // import React, { PropTypes } from 'react';
 import React from 'react';
+import { Link } from 'react-router';
 // import { connect } from 'react-redux';
-// import Helmet from 'react-helmet';
-// import { FormattedMessage } from 'react-intl';
+import classNames from 'classnames';
 
 // Import Style
 // import styles from  './LandingPage.css';
@@ -11,42 +11,34 @@ import React from 'react';
 import background from './nat_bridges.jpg';
 
 // Import Actions
-// import { fetchPost } from '../../PostActions';
 
 export function LandingPage() {
   const background_image = {
     backgroundImage: `url(${background})`,
-    height: `550px`,
+    height: `80vh`,
   }; 
-  const div_height = {
-    height: `100%`,
+  const textButtonStyles = {
+    width: `fit-content`,
+    margin: `auto`,
   }
+
   return (
-    <div className="uk-width-medium-1-1 uk-row-first">
-      <div className="uk-background-cover uk-text-center" style={background_image}>
-          <div className="uk-flex-middle uk-flex-center uk-flex" style={div_height}>
-            <button className="uk-button-large uk-button-primary uk-text-bold uk-margin-medium-right" href="#">Post</button>
-            <button className="uk-button-large uk-button-primary uk-text-bold" href="#">View</button>
+    <div className="uk-width-medium-1-1">
+      <div className="uk-flex uk-flex-middle uk-flex-center uk-background-cover" style={background_image}>
+        <div className="uk-background-default uk-flex uk-flex-column uk-padding">
+          <div className="uk-margin-medium-bottom">
+            <button className="uk-button uk-button-primary uk-button-large uk-margin-medium-right" href="#">Sign Up</button>
+            <button className="uk-button uk-button-primary uk-button-large" href="#">Sign In</button>
           </div>
+          <button className="uk-button uk-button-text" style={textButtonStyles}>
+            <Link className="uk-link-reset" to="/test">Continue as Guest</Link>
+          </button>
+        </div>
       </div>
     </div>
   );
 }
 
-// Actions required to provide data for this component to render in server side.
-// PostDetailPage.need = [params => {
-//   return fetchPost(params.cuid);
-// }];
-
-// Retrieve data from store as props
-// function mapStateToProps(state, props) {
-//   return {
-//     post: getPost(state, props.params.cuid),
-//   };
-// }
-
-LandingPage.propTypes = {
-
-};
+LandingPage.propTypes = {};
 
 export default LandingPage;
