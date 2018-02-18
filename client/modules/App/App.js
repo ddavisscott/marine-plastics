@@ -20,6 +20,7 @@ export class App extends Component {
     super(props);
     this.state = {
       isMounted: false,
+      // isLoggedIn: false,
     };
     this.auth = new Auth();
   }
@@ -31,6 +32,20 @@ export class App extends Component {
   toggleAddPostSection = () => {
     this.props.dispatch(toggleAddPost());
   };
+
+  login = () => {
+    this.auth.login();
+    // this.auth.handleAuthentication();
+    // this.setState({isLoggedIn: true});
+    // console.log(this.state.isLoggedIn);
+  }
+
+  // logout = () => {
+  //   this.auth.logout();
+  //   // this.auth.handleAuthentication();
+  //   // this.setState({isLoggedIn: false});
+  //   // console.log(this.state.isLoggedIn);
+  // }
 
   render() {
     return (
@@ -55,6 +70,9 @@ export class App extends Component {
           />
           <Header
             auth={this.auth}
+            isLoggedIn={this.state.isLoggedIn}
+            login={this.login}
+            logout={this.logout}
             toggleAddPost={this.toggleAddPostSection}
           />
           <div className="uk-grid">
