@@ -26,6 +26,11 @@ export function Header(props, context) {
           <li>
             <Link to="/test">Test Page</Link>
           </li>
+          {
+            props.auth.isAuthenticated()
+              ? <button onClick={props.auth.logout} className="uk-button uk-button-primary">Log Out</button>
+              : <button onClick={props.auth.login} className="uk-button uk-button-primary">Log In</button>
+          }
         </ul>
         {
           context.router.isActive('/', true)
@@ -42,6 +47,9 @@ Header.contextTypes = {
 };
 
 Header.propTypes = {
+  // isAuthenticated: PropTypes.func.isRequired,
+  // login: PropTypes.func.isRequired,
+  // logout: PropTypes.func.isRequired,
   toggleAddPost: PropTypes.func.isRequired,
 };
 

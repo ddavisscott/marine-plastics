@@ -26,10 +26,9 @@ export function LandingPage() {
     <div className="uk-width-medium-1-1">
       <div className="uk-flex uk-flex-middle uk-flex-center uk-background-cover" style={background_image}>
         <div className="uk-background-default uk-flex uk-flex-column uk-padding">
-          <div className="uk-margin-medium-bottom">
-            <button className="uk-button uk-button-primary uk-button-large uk-margin-medium-right" href="#">Sign Up</button>
-            <button className="uk-button uk-button-primary uk-button-large" href="#">Sign In</button>
-          </div>
+          <button className="uk-button uk-button-primary uk-button-large uk-margin-medium-bottom">
+            Sign Up
+          </button>
           <button className="uk-button uk-button-text" style={textButtonStyles}>
             <Link className="uk-link-reset" to="/test">Continue as Guest</Link>
           </button>

@@ -12,12 +12,16 @@ import Footer from './components/Footer/Footer';
 import { toggleAddPost } from './AppActions';
 import { switchLanguage } from '../../modules/Intl/IntlActions';
 
+// Import Authentication
+import Auth from '../../auth';
+
 export class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isMounted: false,
     };
+    this.auth = new Auth();
   }
 
   componentDidMount() {
@@ -50,6 +54,7 @@ export class App extends Component {
             ]}
           />
           <Header
+            auth={this.auth}
             toggleAddPost={this.toggleAddPostSection}
           />
           <div className="uk-grid">
