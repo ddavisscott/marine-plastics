@@ -56,9 +56,6 @@ export class App extends Component {
           />
           <Header
             auth={this.auth}
-            isLoggedIn={this.state.isLoggedIn}
-            login={this.login}
-            logout={this.logout}
             toggleAddPost={this.toggleAddPostSection}
           />
           <div className="uk-grid">
