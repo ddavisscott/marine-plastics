@@ -26,6 +26,7 @@ export class App extends Component {
 
   componentDidMount() {
     this.setState({isMounted: true}); // eslint-disable-line
+    this.auth.handleAuthentication();
   }
 
   toggleAddPostSection = () => {

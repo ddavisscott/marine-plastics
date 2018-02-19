@@ -1,11 +1,5 @@
-// import React, { PropTypes } from 'react';
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
-// import { connect } from 'react-redux';
-import classNames from 'classnames';
-
-// Import Style
-// import styles from  './LandingPage.css';
 
 // Import Image
 import background from './nat_bridges.jpg';

@@ -1,16 +1,9 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
-import classNames from 'classnames';
 
 export function Header(props, context) {
   return (
-    <nav className={
-        classNames(
-          "uk-navbar-container", 
-          "uk-navbar-transparent", 
-          "uk-margin-bottom-small"
-        )
-      }>
+    <nav className="uk-navbar uk-navbar-container uk-navbar-transparent uk-margin-bottom-small">
       <div className="uk-navbar-left">
         <ul className="uk-navbar-nav">
           <li className="uk-logo">
@@ -26,17 +19,15 @@ export function Header(props, context) {
           <li>
             <Link to="/test">Test Page</Link>
           </li>
-          {
-            props.auth.isAuthenticated()
-              ? <button onClick={props.auth.logout} className="uk-button uk-button-primary">Log Out</button>
-              : <button onClick={props.auth.login} className="uk-button uk-button-primary">Log In</button>
+        </ul>
+      </div>
+      <div className="uk-navbar-right">
+        <ul className="uk-navbar-nav">
+          { props.auth.isAuthenticated()
+            ? <a onClick={props.auth.logout} className="uk-button uk-button-primary">Log Out</a>
+            : <a onClick={props.auth.login} className="uk-button uk-button-primary">Log In</a>
           }
         </ul>
-        {
-          context.router.isActive('/', true)
-            ? <a href="#" className="uk-button uk-button-primary" onClick={props.toggleAddPost}>Add Post</a>
-            : null
-        }
       </div>
     </nav>
   );
@@ -47,9 +38,7 @@ Header.contextTypes = {
 };
 
 Header.propTypes = {
-  // isAuthenticated: PropTypes.func.isRequired,
-  // login: PropTypes.func.isRequired,
-  // logout: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
   toggleAddPost: PropTypes.func.isRequired,
 };
 
