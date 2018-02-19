@@ -8,8 +8,10 @@ import styles from './Footer.css';
 // Import Images
 // import bg from '../../header-bk.png';
 
+
+
 export function Footer() {
-  let footerStyles = classNames('uk-position-bottom', styles.footer);
+  let footerStyles = classNames(styles.footer);
 
   return (
     <div className={footerStyles}>
