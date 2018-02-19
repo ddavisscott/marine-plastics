@@ -20,32 +20,18 @@ export class App extends Component {
     super(props);
     this.state = {
       isMounted: false,
-      // isLoggedIn: false,
     };
     this.auth = new Auth();
   }
 
   componentDidMount() {
     this.setState({isMounted: true}); // eslint-disable-line
+    this.auth.handleAuthentication();
   }
 
   toggleAddPostSection = () => {
     this.props.dispatch(toggleAddPost());
   };
-
-  login = () => {
-    this.auth.login();
-    // this.auth.handleAuthentication();
-    // this.setState({isLoggedIn: true});
-    // console.log(this.state.isLoggedIn);
-  }
-
-  // logout = () => {
-  //   this.auth.logout();
-  //   // this.auth.handleAuthentication();
-  //   // this.setState({isLoggedIn: false});
-  //   // console.log(this.state.isLoggedIn);
-  // }
 
   render() {
     return (
