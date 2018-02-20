@@ -10,7 +10,7 @@ export function LandingPage() {
   const background_image = {
     backgroundImage: `url(${background})`,
     height: `80vh`,
-  }; 
+  };
   const textButtonStyles = {
     width: `fit-content`,
     margin: `auto`,
