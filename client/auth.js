@@ -1,4 +1,4 @@
-import auth0 from 'auth0-js';
+import * as auth0 from 'auth0-js';
 
 export default class Auth {
   constructor() {
@@ -53,7 +53,7 @@ export default class Auth {
   }
 
   isAuthenticated() {
-    // Check whether the current time is past the 
+    // Check whether the current time is past the
     // Access Token's expiry time
     let expiresAt = JSON.parse(localStorage.getItem('expires_at'));
     return new Date().getTime() < expiresAt;
