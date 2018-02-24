@@ -173,12 +173,12 @@ export function ProtocolPage() {
 
     <a className="uk-accordion-title" href="#">Random Transect Selection</a>
     <div className="uk-accordion-content">
-    <table border-collapse="collapse" width="100%">
+    <table>
     <tr>
-    <th border="1px solid #dddddd" padding="8px" colSpan={6}>Random Number Table</th>
+    <th colSpan={6}>Random Number Table</th>
     </tr>
     <tr className="test">
-    <td border="1px solid #dddddd" padding="8px"></td>
+    <td></td>
     <td>1</td>
     <td>2</td>
     <td>3</td>
@@ -219,14 +219,14 @@ export function ProtocolPage() {
     </tr>
     </table>
     <p>Transect ID and distance along shore from start of 100-m shoreline section.</p>
-    <table border-collapse="collapse" width="60%">
+    <table>
     <tr>
-    <th border="1px solid #dddddd" text-align="left" padding="8px">Transect ID</th>
+    <th>Transect ID</th>
     <th>Meters</th>
     <th>Feet and inches</th>
     </tr>
     <tr>
-    <td border="1px solid #dddddd" text-align="left" padding="8px">1</td>
+    <td>1</td>
     <td>0–5 m</td>
     <td>0–16' 4"</td>
     </tr>
