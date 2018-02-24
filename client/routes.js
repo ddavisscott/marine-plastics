@@ -19,6 +19,7 @@ if (process.env.NODE_ENV !== 'production') {
   require('./modules/Post/pages/PostListPage/PostListPage');
   require('./modules/Post/pages/PostDetailPage/PostDetailPage');
   require('./modules/Landing/LandingPage');
+  require('./modules/SamplePage/SamplePage');
   require('./modules/Protocol/ProtocolPage');
 }
 
@@ -38,6 +39,14 @@ export default (
       getComponent={(nextState, cb) => {
         require.ensure([], require => {
           cb(null, require('./modules/Landing/LandingPage').default);
+        });
+      }}
+    />
+    <Route
+      path="/test"
+      getComponent={(nextState, cb) => {
+        require.ensure([], require => {
+          cb(null, require('./modules/SamplePage/SamplePage').default);
         });
       }}
     />

@@ -1,39 +1,37 @@
-// import React, { PropTypes } from 'react';
-import React from 'react';
-// import { connect } from 'react-redux';
-// import Helmet from 'react-helmet';
-// import { FormattedMessage } from 'react-intl';
+import React, { PropTypes } from 'react';
+import { Link } from 'react-router';
 
-// Import Style
-// import styles from './LandingPage.css';
-// import styles from '../../components/PostListItem/PostListItem.css';
+// Import Image
+import background from './nat_bridges.jpg';
 
 // Import Actions
-// import { fetchPost } from '../../PostActions';
 
 export function LandingPage() {
+  const background_image = {
+    backgroundImage: `url(${background})`,
+    height: `80vh`,
+  };
+  const textButtonStyles = {
+    width: `fit-content`,
+    margin: `auto`,
+  }
+
   return (
-    <div className="uk-align-center uk-width-1-2">
-      <button className="uk-button uk-align-left uk-button-primary uk-margin-small-left uk-margin-small-right" href="#">Post</button>
-      <button className="uk-button uk-align-right uk-button-primary uk-margin-small-left uk-margin-small-right" href="#">View</button>
+    <div className="uk-width-medium-1-1">
+      <div className="uk-flex uk-flex-middle uk-flex-center uk-background-cover" style={background_image}>
+        <div className="uk-background-default uk-flex uk-flex-column uk-padding">
+          <button className="uk-button uk-button-primary uk-button-large uk-margin-medium-bottom">
+            Sign Up
+          </button>
+          <button className="uk-button uk-button-text" style={textButtonStyles}>
+            <Link className="uk-link-reset" to="/test">Continue as Guest</Link>
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
 
-// Actions required to provide data for this component to render in server side.
-// PostDetailPage.need = [params => {
-//   return fetchPost(params.cuid);
-// }];
-
-// Retrieve data from store as props
-// function mapStateToProps(state, props) {
-//   return {
-//     post: getPost(state, props.params.cuid),
-//   };
-// }
-
-LandingPage.propTypes = {
-
-};
+LandingPage.propTypes = {};
 
 export default LandingPage;
