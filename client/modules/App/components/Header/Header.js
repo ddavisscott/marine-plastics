@@ -19,6 +19,7 @@ export function Header(props, context) {
           <li>
             <Link to="/test">Test Page</Link>
           </li>
+          <li><Link to="/protocol">Protocol</Link></li>
         </ul>
       </div>
       <div className="uk-navbar-right">

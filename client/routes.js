@@ -20,6 +20,7 @@ if (process.env.NODE_ENV !== 'production') {
   require('./modules/Post/pages/PostDetailPage/PostDetailPage');
   require('./modules/Landing/LandingPage');
   require('./modules/SamplePage/SamplePage');
+  require('./modules/Protocol/ProtocolPage');
 }
 
 // react-router setup with code-splitting
@@ -46,6 +47,14 @@ export default (
       getComponent={(nextState, cb) => {
         require.ensure([], require => {
           cb(null, require('./modules/SamplePage/SamplePage').default);
+        });
+      }}
+    />
+    <Route
+      path="/protocol"
+      getComponent={(nextState, cb) => {
+        require.ensure([], require => {
+          cb(null, require('./modules/Protocol/ProtocolPage').default);
         });
       }}
     />
