@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-
 // import styles from './ProtocolPage.css';  
 // Causes program to not compile, but adding the line in after compiling works for importing the css file 
 // Temporarily added some formatting to this document itself
@@ -173,158 +172,164 @@ export function ProtocolPage() {
 
     <a className="uk-accordion-title" href="#">Random Transect Selection</a>
     <div className="uk-accordion-content">
-    <table>
-    <tr>
-    <th colSpan={6}>Random Number Table</th>
-    </tr>
-    <tr className="test">
-    <td></td>
-    <td>1</td>
-    <td>2</td>
-    <td>3</td>
-    <td>4</td>
-    <td>5</td>
-    </tr>
-    <tr>
-    <td>1</td>
-    <td>4</td>
-    <td>8</td>
-    <td>17</td>
-    <td>9</td>
-    <td>1</td>
-    </tr>
-    <tr>
-    <td>2</td>
-    <td>7</td>
-    <td>19</td>
-    <td>2</td>
-    <td>12</td>
-    <td>20</td>
-    </tr>
-    <tr>
-    <td>3</td>
-    <td>18</td>
-    <td>14</td>
-    <td>6</td>
-    <td>16</td>
-    <td>11</td>
-    </tr>
-    <tr>
-    <td>4</td>
-    <td>3</td>
-    <td>5</td>
-    <td>15</td>
-    <td>10</td>
-    <td>13</td>
-    </tr>
-    </table>
-    <p>Transect ID and distance along shore from start of 100-m shoreline section.</p>
-    <table>
-    <tr>
-    <th>Transect ID</th>
-    <th>Meters</th>
-    <th>Feet and inches</th>
-    </tr>
-    <tr>
-    <td>1</td>
-    <td>0–5 m</td>
-    <td>0–16' 4"</td>
-    </tr>
-    <tr>
-    <td>2</td>
-    <td>5–10 m</td>
-    <td>16'4"–32'9"</td>
-    </tr>
-    <tr>
-    <td>3</td>
-    <td>10–15 m</td>
-    <td>32'9"–49'2"</td>
-    </tr>
-    <tr>
-    <td>4</td>
-    <td>15–20 m</td>
-    <td>49'2"–65'7"</td>
-    </tr>
-    <tr>
-    <td>5</td>
-    <td>20–25 m</td>
-    <td>65'7"–82'</td>
-    </tr>
-    <tr>
-    <td>6</td>
-    <td>25–30 m</td>
-    <td>82'–98'5"</td>
-    </tr>
-    <tr>
-    <td>7</td>
-    <td>30–35 m</td>
-    <td>98'5"–114'9"</td>
-    </tr>
-    <tr>
-    <td>8</td>
-    <td>35–40 m</td>
-    <td>114'9"–131'2"</td>
-    </tr>
-    <tr>
-    <td>9</td>
-    <td>40–45 m</td>
-    <td>131'2"–147'7"</td>
-    </tr>
-    <tr>
-    <td>10</td>
-    <td>45–50 m</td>
-    <td>147'7"–164'</td>
-    </tr>
-    <tr>
-    <td>11</td>
-    <td>50–55 m</td>
-    <td>164'–180'5"</td>
-    </tr>
-    <tr>
-    <td>12</td>
-    <td>55–60 m</td>
-    <td>180'5"–196'10"</td>
-    </tr>
-    <tr>
-    <td>13</td>
-    <td>60–65 m</td>
-    <td>196'10"–213'3"</td>
-    </tr>
-    <tr>
-    <td>14</td>
-    <td>65–70 m</td>
-    <td>213'3"–229'7"</td>
-    </tr>
-    <tr>
-    <td>15</td>
-    <td>70–75 m</td>
-    <td>229'7"–246'</td>
-    </tr>
-    <tr>
-    <td>16</td>
-    <td>75–80 m</td>
-    <td>246'–262'5"</td>
-    </tr>
-    <tr>
-    <td>17</td>
-    <td>80–85 m</td>
-    <td>262'5"–278'10"</td>
-    </tr>
-    <tr>
-    <td>18</td>
-    <td>85–90 m</td>
-    <td>278'5"–295'3" </td>
-    </tr>
-    <tr>
-    <td>19</td>
-    <td>90–95 m</td>
-    <td>295'3"–311'8"</td>
-    </tr>
-    <tr>
-    <td>20</td>
-    <td>95–100 m</td>
-    <td>311'8" - 328'1"</td>
-    </tr>
+    <table className="uk-table uk-table-divider">
+    <thead>
+        <tr>
+            <th colSpan={6}>Random Number Table</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td></td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        </tr>
+        <tr>
+        <td>1</td>
+        <td>4</td>
+        <td>8</td>
+        <td>17</td>
+        <td>9</td>
+        <td>1</td>
+        </tr>
+        <tr>
+        <td>2</td>
+        <td>7</td>
+        <td>19</td>
+        <td>2</td>
+        <td>12</td>
+        <td>20</td>
+        </tr>
+        <tr>
+        <td>3</td>
+        <td>18</td>
+        <td>14</td>
+        <td>6</td>
+        <td>16</td>
+        <td>11</td>
+        </tr>
+        <tr>
+        <td>4</td>
+        <td>3</td>
+        <td>5</td>
+        <td>15</td>
+        <td>10</td>
+        <td>13</td>
+        </tr>
+        </tbody>
+        </table>
+        <p>Transect ID and distance along shore from start of 100-m shoreline section.</p>
+        <table className="uk-table uk-table-divider">
+        <tbody>
+        <tr>
+        <th>Transect ID</th>
+        <th>Meters</th>
+        <th>Feet and inches</th>
+        </tr>
+        <tr>
+        <td>1</td>
+        <td>0–5 m</td>
+        <td>0–16' 4"</td>
+        </tr>
+        <tr>
+        <td>2</td>
+        <td>5–10 m</td>
+        <td>16'4"–32'9"</td>
+        </tr>
+        <tr>
+        <td>3</td>
+        <td>10–15 m</td>
+        <td>32'9"–49'2"</td>
+        </tr>
+        <tr>
+        <td>4</td>
+        <td>15–20 m</td>
+        <td>49'2"–65'7"</td>
+        </tr>
+        <tr>
+        <td>5</td>
+        <td>20–25 m</td>
+        <td>65'7"–82'</td>
+        </tr>
+        <tr>
+        <td>6</td>
+        <td>25–30 m</td>
+        <td>82'–98'5"</td>
+        </tr>
+        <tr>
+        <td>7</td>
+        <td>30–35 m</td>
+        <td>98'5"–114'9"</td>
+        </tr>
+        <tr>
+        <td>8</td>
+        <td>35–40 m</td>
+        <td>114'9"–131'2"</td>
+        </tr>
+        <tr>
+        <td>9</td>
+        <td>40–45 m</td>
+        <td>131'2"–147'7"</td>
+        </tr>
+        <tr>
+        <td>10</td>
+        <td>45–50 m</td>
+        <td>147'7"–164'</td>
+        </tr>
+        <tr>
+        <td>11</td>
+        <td>50–55 m</td>
+        <td>164'–180'5"</td>
+        </tr>
+        <tr>
+        <td>12</td>
+        <td>55–60 m</td>
+        <td>180'5"–196'10"</td>
+        </tr>
+        <tr>
+        <td>13</td>
+        <td>60–65 m</td>
+        <td>196'10"–213'3"</td>
+        </tr>
+        <tr>
+        <td>14</td>
+        <td>65–70 m</td>
+        <td>213'3"–229'7"</td>
+        </tr>
+        <tr>
+        <td>15</td>
+        <td>70–75 m</td>
+        <td>229'7"–246'</td>
+        </tr>
+        <tr>
+        <td>16</td>
+        <td>75–80 m</td>
+        <td>246'–262'5"</td>
+        </tr>
+        <tr>
+        <td>17</td>
+        <td>80–85 m</td>
+        <td>262'5"–278'10"</td>
+        </tr>
+        <tr>
+        <td>18</td>
+        <td>85–90 m</td>
+        <td>278'5"–295'3" </td>
+        </tr>
+        <tr>
+        <td>19</td>
+        <td>90–95 m</td>
+        <td>295'3"–311'8"</td>
+        </tr>
+        <tr>
+        <td>20</td>
+        <td>95–100 m</td>
+        <td>311'8" - 328'1"</td>
+        </tr>
+        </tbody>
     </table>
     <br></br>
     </div>
