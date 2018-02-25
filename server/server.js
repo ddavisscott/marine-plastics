@@ -11,6 +11,7 @@ import config from '../webpack.config.dev';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 
+
 // Initialize the Express App
 const app = new Express();
 
@@ -39,6 +40,7 @@ import { fetchComponentData } from './util/fetchData';
 import posts from './routes/post.routes';
 import dummyData from './dummyData';
 import serverConfig from './config';
+import connect_to_db from './mongoosedb';
 
 // Set native promises as mongoose promise
 mongoose.Promise = global.Promise;
@@ -51,7 +53,7 @@ mongoose.connect(serverConfig.mongoURL, (error) => {
   }
 
   // feed some dummy data in DB.
-  dummyData();
+  connect_to_db();
 });
 
 // Apply body Parser and server public assets and routes
