@@ -21,6 +21,7 @@ if (process.env.NODE_ENV !== 'production') {
   require('./modules/Landing/LandingPage');
   require('./modules/SamplePage/SamplePage');
   require('./modules/Protocol/ProtocolPage');
+  require('./modules/Survey/pages/FormPage');
 }
 
 // react-router setup with code-splitting
@@ -55,6 +56,14 @@ export default (
       getComponent={(nextState, cb) => {
         require.ensure([], require => {
           cb(null, require('./modules/Protocol/ProtocolPage').default);
+        });
+      }}
+    />
+    <Route
+      path="/form"
+      getComponent={(nextState, cb) => {
+        require.ensure([], require => {
+          cb(null, require('./modules/Survey/pages/FormPage').default);
         });
       }}
     />

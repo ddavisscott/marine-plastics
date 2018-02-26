@@ -48,6 +48,7 @@
     "react-redux": "^4.4.5",
     "react-router": "^2.4.1",
     "redux": "^3.5.2",
+    "redux-form": "^7.2.3",
     "redux-thunk": "^2.1.0",
     "sanitize-html": "^1.11.4",
     "uikit": "^3.0.0-beta.39"
@@ -106,7 +107,7 @@
     "style-loader": "^0.13.1",
     "supertest": "^1.2.0",
     "url-loader": "^0.5.7",
-    "webpack": "^2.1.0-beta.8",
+    "webpack": "^2.1.0-beta.22",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-dev-server": "^2.1.0-beta.0",
     "webpack-externals-plugin": "^1.0.0",
